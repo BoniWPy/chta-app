@@ -2,7 +2,7 @@
 
 import 'dart:core';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
 import 'package:fiberchat/Configs/Enum.dart';
 import 'package:fiberchat/Configs/app_constants.dart';
@@ -45,13 +45,13 @@ void main() async {
 
   final WidgetsBinding binding = WidgetsFlutterBinding.ensureInitialized();
 
-  if (IsBannerAdShow == true ||
-      IsInterstitialAdShow == true ||
-      IsVideoAdShow == true) Admob.initialize();
-  if (Platform.isIOS == true &&
-      (IsBannerAdShow == true ||
-          IsInterstitialAdShow == true ||
-          IsVideoAdShow == true)) await Admob.requestTrackingAuthorization();
+  // if (IsBannerAdShow == true ||
+  //     IsInterstitialAdShow == true ||
+  //     IsVideoAdShow == true) Admob.initialize();
+  // if (Platform.isIOS == true &&
+  //     (IsBannerAdShow == true ||
+  //         IsInterstitialAdShow == true ||
+  //         IsVideoAdShow == true)) await Admob.requestTrackingAuthorization();
 
   binding.renderView.automaticSystemUiAdjustment = false;
 

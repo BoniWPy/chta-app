@@ -1,7 +1,7 @@
 //*************   © Copyrighted by Thinkcreative_Technologies. An Exclusive item of Envato market. Make sure you have purchased a Regular License OR Extended license for the Source Code from Envato to use this product. See the License Defination attached with source code. *********************
 
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
@@ -360,21 +360,21 @@ class _GroupDetailsState extends State<GroupDetails> {
                                 bottom: Platform.isIOS == true ? 25.0 : 5,
                                 top: 0),
                             child: Center(
-                              child: AdmobBanner(
-                                adUnitId: getBannerAdUnitId()!,
-                                adSize: AdmobBannerSize.BANNER,
-                                listener: (AdmobAdEvent event,
-                                    Map<String, dynamic>? args) {
-                                  // handleEvent(event, args, 'Banner');
-                                },
-                                onBannerCreated:
-                                    (AdmobBannerController controller) {
-                                  // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
-                                  // Normally you don't need to worry about disposing this yourself, it's handled.
-                                  // If you need direct access to dispose, this is your guy!
-                                  // controller.dispose();
-                                },
-                              ),
+                              // child: AdmobBanner(
+                              //   adUnitId: getBannerAdUnitId()!,
+                              //   adSize: AdmobBannerSize.BANNER,
+                              //   listener: (AdmobAdEvent event,
+                              //       Map<String, dynamic>? args) {
+                              //     // handleEvent(event, args, 'Banner');
+                              //   },
+                              //   onBannerCreated:
+                              //       (AdmobBannerController controller) {
+                              //     // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
+                              //     // Normally you don't need to worry about disposing this yourself, it's handled.
+                              //     // If you need direct access to dispose, this is your guy!
+                              //     // controller.dispose();
+                              //   },
+                              // ),
                             ),
                           )
                         : SizedBox(

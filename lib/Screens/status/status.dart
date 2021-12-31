@@ -1,7 +1,7 @@
 //*************   © Copyrighted by Thinkcreative_Technologies. An Exclusive item of Envato market. Make sure you have purchased a Regular License OR Extended license for the Source Code from Envato to use this product. See the License Defination attached with source code. *********************
 
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
@@ -55,7 +55,7 @@ class Status extends StatefulWidget {
 class _StatusState extends State<Status> with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
-  late AdmobInterstitial interstitialAd;
+  // late AdmobInterstitial interstitialAd;
   loading() {
     return Stack(children: [
       Container(
@@ -82,14 +82,14 @@ class _StatusState extends State<Status> with AutomaticKeepAliveClientMixin {
 
       // Interstital Ads
       if (IsInterstitialAdShow == true && observer.isadmobshow == true) {
-        interstitialAd = AdmobInterstitial(
-          adUnitId: getInterstitialAdUnitId()!,
-          listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-            if (event == AdmobAdEvent.closed) interstitialAd.load();
-            // handleEvent(event, args, 'Interstitial');
-          },
-        );
-        interstitialAd.load();
+        // interstitialAd = AdmobInterstitial(
+        //   adUnitId: getInterstitialAdUnitId()!,
+        //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+        //     if (event == AdmobAdEvent.closed) interstitialAd.load();
+        //     // handleEvent(event, args, 'Interstitial');
+        //   },
+        // );
+        // interstitialAd.load();
       }
     });
   }
@@ -165,13 +165,13 @@ class _StatusState extends State<Status> with AutomaticKeepAliveClientMixin {
                     margin: EdgeInsets.only(
                         bottom: Platform.isIOS == true ? 25.0 : 5, top: 0),
                     child: Center(
-                      child: AdmobBanner(
-                        adUnitId: getBannerAdUnitId()!,
-                        adSize: AdmobBannerSize.BANNER,
-                        listener:
-                            (AdmobAdEvent event, Map<String, dynamic>? args) {},
-                        onBannerCreated: (AdmobBannerController controller) {},
-                      ),
+                      // child: AdmobBanner(
+                      //   adUnitId: getBannerAdUnitId()!,
+                      //   adSize: AdmobBannerSize.BANNER,
+                      //   listener:
+                      //       (AdmobAdEvent event, Map<String, dynamic>? args) {},
+                      //   onBannerCreated: (AdmobBannerController controller) {},
+                      // ),
                     ),
                   )
                 : SizedBox(
@@ -900,7 +900,7 @@ class _StatusState extends State<Status> with AutomaticKeepAliveClientMixin {
                                                                                           });
                                                                                           if (IsInterstitialAdShow == true && observer.isadmobshow == true) {
                                                                                             Future.delayed(const Duration(milliseconds: 500), () {
-                                                                                              interstitialAd.show();
+                                                                                              // interstitialAd.show();
                                                                                             });
                                                                                           }
                                                                                         },
@@ -1016,7 +1016,7 @@ class _StatusState extends State<Status> with AutomaticKeepAliveClientMixin {
                                                                                         });
                                                                                         if (IsInterstitialAdShow == true && observer.isadmobshow == true) {
                                                                                           Future.delayed(const Duration(milliseconds: 500), () {
-                                                                                            interstitialAd.show();
+                                                                                            // interstitialAd.show();
                                                                                           });
                                                                                         }
                                                                                       },

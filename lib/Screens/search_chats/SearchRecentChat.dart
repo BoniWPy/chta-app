@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'dart:core';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
 import 'package:fiberchat/Configs/Dbpaths.dart';
@@ -55,9 +55,9 @@ class SearchChatsState extends State<SearchChats> {
       List.from(<StreamSubscription>[]);
 
   List<StreamController> controllers = new List.from(<StreamController>[]);
-  late AdmobBannerSize bannerSize;
-  late AdmobInterstitial interstitialAd;
-  late AdmobReward rewardAd;
+  // late AdmobBannerSize bannerSize;
+  // late AdmobInterstitial interstitialAd;
+  // late AdmobReward rewardAd;
   @override
   void initState() {
     super.initState();
@@ -66,16 +66,16 @@ class SearchChatsState extends State<SearchChats> {
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       final observer = Provider.of<Observer>(this.context, listen: false);
       if (IsBannerAdShow == true && observer.isadmobshow == true) {
-        bannerSize = AdmobBannerSize.BANNER;
-        rewardAd = AdmobReward(
-          adUnitId: getRewardBasedVideoAdUnitId()!,
-          listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-            if (event == AdmobAdEvent.closed) rewardAd.load();
-            // handleEvent(event, args, 'Reward');
-          },
-        );
-        // interstitialAd.load();
-        rewardAd.load();
+        // bannerSize = AdmobBannerSize.BANNER;
+        // rewardAd = AdmobReward(
+        //   adUnitId: getRewardBasedVideoAdUnitId()!,
+        //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+        //     if (event == AdmobAdEvent.closed) rewardAd.load();
+        //     // handleEvent(event, args, 'Reward');
+        //   },
+        // );
+        // // interstitialAd.load();
+        // rewardAd.load();
       }
     });
   }
@@ -352,16 +352,16 @@ class SearchChatsState extends State<SearchChats> {
                                 ? Container(
                                     margin:
                                         EdgeInsets.only(bottom: 30.0, top: 30),
-                                    child: AdmobBanner(
-                                      adUnitId: getBannerAdUnitId()!,
-                                      adSize: AdmobBannerSize.MEDIUM_RECTANGLE,
-                                      listener: (AdmobAdEvent event,
-                                          Map<String, dynamic>? args) {
-                                        // handleEvent(event, args, 'Banner');
-                                      },
-                                      onBannerCreated:
-                                          (AdmobBannerController controller) {},
-                                    ),
+                                    // child: AdmobBanner(
+                                    //   adUnitId: getBannerAdUnitId()!,
+                                    //   adSize: AdmobBannerSize.MEDIUM_RECTANGLE,
+                                    //   listener: (AdmobAdEvent event,
+                                    //       Map<String, dynamic>? args) {
+                                    //     // handleEvent(event, args, 'Banner');
+                                    //   },
+                                    //   onBannerCreated:
+                                    //       (AdmobBannerController controller) {},
+                                    // ),
                                   )
                                 : SizedBox(height: 0),
                           ]))),
@@ -389,20 +389,20 @@ class SearchChatsState extends State<SearchChats> {
                     margin: EdgeInsets.only(
                         bottom: Platform.isIOS == true ? 25.0 : 5, top: 0),
                     child: Center(
-                      child: AdmobBanner(
-                        adUnitId: getBannerAdUnitId()!,
-                        adSize: AdmobBannerSize.BANNER,
-                        listener:
-                            (AdmobAdEvent event, Map<String, dynamic>? args) {
-                          // handleEvent(event, args, 'Banner');
-                        },
-                        onBannerCreated: (AdmobBannerController controller) {
-                          // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
-                          // Normally you don't need to worry about disposing this yourself, it's handled.
-                          // If you need direct access to dispose, this is your guy!
-                          // controller.dispose();
-                        },
-                      ),
+                      // child: AdmobBanner(
+                      //   adUnitId: getBannerAdUnitId()!,
+                      //   adSize: AdmobBannerSize.BANNER,
+                      //   listener:
+                      //       (AdmobAdEvent event, Map<String, dynamic>? args) {
+                      //     // handleEvent(event, args, 'Banner');
+                      //   },
+                      //   onBannerCreated: (AdmobBannerController controller) {
+                      //     // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
+                      //     // Normally you don't need to worry about disposing this yourself, it's handled.
+                      //     // If you need direct access to dispose, this is your guy!
+                      //     // controller.dispose();
+                      //   },
+                      // ),
                     ),
                   )
                 : SizedBox(

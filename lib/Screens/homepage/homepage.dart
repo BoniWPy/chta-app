@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'dart:core';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:device_info/device_info.dart';
 import 'package:devicelocale/devicelocale.dart';
@@ -277,7 +277,7 @@ class HomepageState extends State<Homepage>
   }
 
   void registerNotification() async {
-    await Admob.requestTrackingAuthorization();
+    // await Admob.requestTrackingAuthorization();
     await FirebaseMessaging.instance.requestPermission(
       alert: true,
       badge: true,

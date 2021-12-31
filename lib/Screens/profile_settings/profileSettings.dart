@@ -2,7 +2,7 @@
 
 import 'dart:async';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
@@ -318,16 +318,16 @@ class ProfileSettingState extends State<ProfileSetting> {
                       IsBannerAdShow == true && observer.isadmobshow == true
                           ? Container(
                               margin: EdgeInsets.only(bottom: 5.0, top: 40),
-                              child: AdmobBanner(
-                                adUnitId: getBannerAdUnitId()!,
-                                adSize: AdmobBannerSize.MEDIUM_RECTANGLE,
-                                listener: (AdmobAdEvent event,
-                                    Map<String, dynamic>? args) {
-                                  // handleEvent(event, args, 'Banner');
-                                },
-                                onBannerCreated:
-                                    (AdmobBannerController controller) {},
-                              ),
+                              // child: AdmobBanner(
+                              //   adUnitId: getBannerAdUnitId()!,
+                              //   adSize: AdmobBannerSize.MEDIUM_RECTANGLE,
+                              //   listener: (AdmobAdEvent event,
+                              //       Map<String, dynamic>? args) {
+                              //     // handleEvent(event, args, 'Banner');
+                              //   },
+                              //   onBannerCreated:
+                              //       (AdmobBannerController controller) {},
+                              // ),
                             )
                           : SizedBox(
                               height: 0,

@@ -8,13 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "22.0.0"
-  admob_flutter:
-    dependency: "direct main"
-    description:
-      name: admob_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0-nullsafety.1"
   agora_rtc_engine:
     dependency: "direct main"
     description:
@@ -1059,7 +1052,7 @@ packages:
       name: photo_view
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.11.1"
+    version: "0.13.0"
   platform:
     dependency: transitive
     description:

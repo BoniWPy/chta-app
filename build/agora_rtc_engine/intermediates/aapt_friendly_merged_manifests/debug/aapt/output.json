@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "applicationId": "io.agora.agora_rtc_engine",
+  "variantType": "LIBRARY",
+  "elements": [
+    {
+      "outputType": {
+        "type": "AAPT_FRIENDLY_MERGED_MANIFESTS"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": -1,
+        "outputFile": "agora_rtc_engine-debug.aar",
+        "fullName": "debug",
+        "baseName": "debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {
+        "packageId": "io.agora.agora_rtc_engine",
+        "split": ""
+      }
+    }
+  ]
+}

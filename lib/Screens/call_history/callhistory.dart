@@ -2,7 +2,7 @@
 
 import 'dart:async';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
@@ -49,7 +49,7 @@ class _CallHistoryState extends State<CallHistory> {
         isvideocall: isvideocall);
   }
 
-  late AdmobInterstitial interstitialAd;
+  // late AdmobInterstitial interstitialAd;
   GlobalKey<ScaffoldState> _scaffold = new GlobalKey<ScaffoldState>();
   @override
   void initState() {
@@ -57,17 +57,17 @@ class _CallHistoryState extends State<CallHistory> {
     WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       final observer = Provider.of<Observer>(this.context, listen: false);
       if (IsInterstitialAdShow == true && observer.isadmobshow == true) {
-        interstitialAd = AdmobInterstitial(
-          adUnitId: getInterstitialAdUnitId()!,
-          listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-            if (event == AdmobAdEvent.closed) interstitialAd.load();
-            // handleEvent(event, args, 'Interstitial');
-          },
-        );
-        interstitialAd.load();
-        Future.delayed(const Duration(milliseconds: 2000), () {
-          interstitialAd.show();
-        });
+        // interstitialAd = AdmobInterstitial(
+        //   adUnitId: getInterstitialAdUnitId()!,
+        //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+        //     if (event == AdmobAdEvent.closed) interstitialAd.load();
+        //     // handleEvent(event, args, 'Interstitial');
+        //   },
+        // );
+        // interstitialAd.load();
+        // Future.delayed(const Duration(milliseconds: 2000), () {
+        //   interstitialAd.show();
+        // });
       }
     });
   }
@@ -83,19 +83,19 @@ class _CallHistoryState extends State<CallHistory> {
                 margin: EdgeInsets.only(
                     bottom: Platform.isIOS == true ? 25.0 : 5, top: 0),
                 child: Center(
-                  child: AdmobBanner(
-                    adUnitId: getBannerAdUnitId()!,
-                    adSize: AdmobBannerSize.BANNER,
-                    listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-                      // handleEvent(event, args, 'Banner');
-                    },
-                    onBannerCreated: (AdmobBannerController controller) {
-                      // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
-                      // Normally you don't need to worry about disposing this yourself, it's handled.
-                      // If you need direct access to dispose, this is your guy!
-                      // controller.dispose();
-                    },
-                  ),
+                  // child: AdmobBanner(
+                  //   adUnitId: getBannerAdUnitId()!,
+                  //   adSize: AdmobBannerSize.BANNER,
+                  //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+                  //     // handleEvent(event, args, 'Banner');
+                  //   },
+                  //   onBannerCreated: (AdmobBannerController controller) {
+                  //     // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
+                  //     // Normally you don't need to worry about disposing this yourself, it's handled.
+                  //     // If you need direct access to dispose, this is your guy!
+                  //     // controller.dispose();
+                  //   },
+                  // ),
                 ),
               )
             : SizedBox(

@@ -1,6 +1,6 @@
 //*************   © Copyrighted by Thinkcreative_Technologies. An Exclusive item of Envato market. Make sure you have purchased a Regular License OR Extended license for the Source Code from Envato to use this product. See the License Defination attached with source code. *********************
 
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:fiberchat/Configs/app_constants.dart';
@@ -76,8 +76,8 @@ class GroupChatPage extends StatefulWidget {
 class _GroupChatPageState extends State<GroupChatPage>
     with WidgetsBindingObserver {
   bool isgeneratingThumbnail = false;
-  late AdmobReward rewardAd;
-  late AdmobInterstitial interstitialAd;
+  // late AdmobReward rewardAd;
+  // late AdmobInterstitial interstitialAd;
   late Stream<QuerySnapshot> groupChatMessages;
   GlobalKey<ScaffoldState> _scaffold = new GlobalKey<ScaffoldState>();
   GlobalKey<State> _keyLoader =
@@ -104,27 +104,27 @@ class _GroupChatPageState extends State<GroupChatPage>
               1, widget.groupID.replaceAll(RegExp('-'), '').toString().length));
 
       if (IsVideoAdShow == true && observer.isadmobshow == true) {
-        rewardAd = AdmobReward(
-            adUnitId: getRewardBasedVideoAdUnitId()!,
-            listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-              if (event == AdmobAdEvent.closed) {
-                rewardAd.load();
-              }
-            });
-        rewardAd.load();
+        // rewardAd = AdmobReward(
+        //     adUnitId: getRewardBasedVideoAdUnitId()!,
+        //     listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+        //       if (event == AdmobAdEvent.closed) {
+        //         rewardAd.load();
+        //       }
+        //     });
+        // rewardAd.load();
       }
 
       if (IsInterstitialAdShow == true &&
           observer.isadmobshow == true &&
           ((IsVideoAdShow == false || observer.isadmobshow == false))) {
-        interstitialAd = AdmobInterstitial(
-          adUnitId: getInterstitialAdUnitId()!,
-          listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-            if (event == AdmobAdEvent.closed) interstitialAd.load();
-            // handleEvent(event, args, 'Interstitial');
-          },
-        );
-        interstitialAd.load();
+        // interstitialAd = AdmobInterstitial(
+        //   adUnitId: getInterstitialAdUnitId()!,
+        //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+        //     if (event == AdmobAdEvent.closed) interstitialAd.load();
+        //     // handleEvent(event, args, 'Interstitial');
+        //   },
+        // );
+        // interstitialAd.load();
       }
     });
   }
@@ -425,16 +425,16 @@ class _GroupChatPageState extends State<GroupChatPage>
           type == MessageType.contact) {
         if (IsVideoAdShow == true && observer.isadmobshow == true) {
           Future.delayed(const Duration(milliseconds: 800), () {
-            rewardAd.show();
+            // rewardAd.show();
           });
         }
 
         if (IsInterstitialAdShow == true &&
             observer.isadmobshow == true &&
             ((IsVideoAdShow == false || observer.isadmobshow == false))) {
-          interstitialAd.show();
+          // interstitialAd.show();
           Future.delayed(const Duration(milliseconds: 400), () {
-            interstitialAd.load();
+            // interstitialAd.load();
           });
         }
       }

@@ -8,12 +8,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "admob_flutter",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dartlang.org/admob_flutter-2.0.0-nullsafety.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "agora_rtc_engine",
       "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dartlang.org/agora_rtc_engine-4.0.1",
       "packageUri": "lib/",
@@ -915,7 +909,7 @@
     },
     {
       "name": "photo_view",
-      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dartlang.org/photo_view-0.11.1",
+      "rootUri": "file:///Users/macbook/.pub-cache/hosted/pub.dartlang.org/photo_view-0.13.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1358,7 +1352,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-12-27T02:45:20.321565Z",
+  "generated": "2021-12-28T18:23:50.365557Z",
   "generator": "pub",
   "generatorVersion": "2.14.0-167.0.dev"
 }

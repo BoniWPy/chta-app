@@ -4,7 +4,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'dart:ui';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:collection/collection.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:fiberchat/Screens/chat_screen/utils/uploadMediaWithProgress.dart';
@@ -121,8 +121,8 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
   final ScrollController realtime = new ScrollController();
   final ScrollController saved = new ScrollController();
   DataModel? _cachedModel;
-  late AdmobReward rewardAd;
-  late AdmobInterstitial interstitialAd;
+  // late AdmobReward rewardAd;
+  // late AdmobInterstitial interstitialAd;
 
   Duration? duration;
   Duration? position;
@@ -177,14 +177,14 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
 
         // Interstital Ads
         if (IsInterstitialAdShow == true && observer.isadmobshow == true) {
-          interstitialAd = AdmobInterstitial(
-            adUnitId: getInterstitialAdUnitId()!,
-            listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
-              if (event == AdmobAdEvent.closed) interstitialAd.load();
-              // handleEvent(event, args, 'Interstitial');
-            },
-          );
-          interstitialAd.load();
+          // interstitialAd = AdmobInterstitial(
+          //   adUnitId: getInterstitialAdUnitId()!,
+          //   listener: (AdmobAdEvent event, Map<String, dynamic>? args) {
+          //     if (event == AdmobAdEvent.closed) interstitialAd.load();
+          //     // handleEvent(event, args, 'Interstitial');
+          //   },
+          // );
+          // interstitialAd.load();
         }
       });
     });
@@ -216,10 +216,10 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
     deleteUptoSubscription?.cancel();
   }
 
-  loadvideoAd() {
-    return AdmobReward(
-        adUnitId: getRewardBasedVideoAdUnitId()!, nonPersonalizedAds: true);
-  }
+  // loadvideoAd() {
+  //   return AdmobReward(
+  //       adUnitId: getRewardBasedVideoAdUnitId()!, nonPersonalizedAds: true);
+  // }
 
   void setLastSeen() async {
     if (chatStatus != ChatStatus.blocked.index) {
@@ -3489,7 +3489,7 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                                                               true &&
                                                           observer.isadmobshow ==
                                                               true) {
-                                                        interstitialAd.show();
+                                                        // interstitialAd.show();
                                                       }
 
                                                       await Permissions
@@ -3553,7 +3553,7 @@ class _ChatScreenState extends State<ChatScreen> with WidgetsBindingObserver {
                                                               true &&
                                                           observer.isadmobshow ==
                                                               true) {
-                                                        interstitialAd.show();
+                                                        // interstitialAd.show();
                                                       }
 
                                                       await Permissions

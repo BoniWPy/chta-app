@@ -3,7 +3,7 @@
 import 'dart:async';
 import 'dart:core';
 import 'dart:io';
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fiberchat/Configs/Dbkeys.dart';
 import 'package:fiberchat/Configs/Dbpaths.dart';
@@ -551,20 +551,20 @@ class RecentChatsState extends State<RecentChats> {
                   margin: EdgeInsets.only(
                       bottom: Platform.isIOS == true ? 25.0 : 5, top: 0),
                   child: Center(
-                    child: AdmobBanner(
-                      adUnitId: getBannerAdUnitId()!,
-                      adSize: AdmobBannerSize.BANNER,
-                      listener:
-                          (AdmobAdEvent event, Map<String, dynamic>? args) {
-                        // handleEvent(event, args, 'Banner');
-                      },
-                      onBannerCreated: (AdmobBannerController controller) {
-                        // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
-                        // Normally you don't need to worry about disposing this yourself, it's handled.
-                        // If you need direct access to dispose, this is your guy!
-                        // controller.dispose();
-                      },
-                    ),
+                    // child: AdmobBanner(
+                    //   adUnitId: getBannerAdUnitId()!,
+                    //   adSize: AdmobBannerSize.BANNER,
+                    //   listener:
+                    //       (AdmobAdEvent event, Map<String, dynamic>? args) {
+                    //     // handleEvent(event, args, 'Banner');
+                    //   },
+                    //   onBannerCreated: (AdmobBannerController controller) {
+                    //     // Dispose is called automatically for you when Flutter removes the banner from the widget tree.
+                    //     // Normally you don't need to worry about disposing this yourself, it's handled.
+                    //     // If you need direct access to dispose, this is your guy!
+                    //     // controller.dispose();
+                    //   },
+                    // ),
                   ),
                 )
               : SizedBox(
